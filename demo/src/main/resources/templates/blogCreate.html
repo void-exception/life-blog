@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Напиши свою статью</title>
+  <link rel="stylesheet" href="/css/styl.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Life Blog</h1> <!-- Просто текст, без позиционирования -->
+  </header>
+
+  <div class="container">
+    <h2 class="page-title">Напиши свою статью!</h2>
+    <form class="article-form" action="/create" method="post">
+      <div class="form-group">
+        <label for="title">Введите заголовок статьи</label>
+        <input type="text" id="title" name="title" placeholder="Введите заголовок статьи" required>
+      </div>
+      <div class="form-group">
+        <label for="short-content">Заинтересуйте читателей!</label>
+        <input type="text" id="short-content" name="summary" placeholder="Введите краткое содержание статьи" required>
+      </div>
+      <div class="form-group">
+        <label for="full-content">Введите полный текст статьи</label>
+        <textarea id="full-content" rows="10" name="fullText" placeholder="Введите полный текст статьи" required></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="publish-btn">Опубликовать</button>
+        <a href="/home" class="back-link">Вернуться на главную</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    /*font-family: Arial, sans-serif;*/
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #5bc0de;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+  }
+  
+  /* Logo position fix */
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;  /* Отцентрируем текст */
+    margin: 0; /* Убираем лишние отступы */
+  }
+  
+  /* Page title */
+  .page-title {
+    font-size: 24px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Main content */
+  .main {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  /* Post styles */
+  .post {
+    background-color: #d9edf7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .post-title {
+    font-size: 18px;
+    color: #337ab7;
+    margin-bottom: 10px;
+  }
+  
+  .post-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Post actions *
+  .post-actions {
+    margin-bottom: 20px;
+  }
+
+  .edit-btn, .delete-btn, .read-btn {
+    display: inline-block;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .edit-btn:hover, .read-btn:hover {
+    background-color: #f0ad4e;
+  }
+
+  .delete-btn:hover {
+    background-color: #c9302c;
+  }*/
+  /* Post actions */
+  .post-actions {
+    display: flex;         /* Используем flexbox для выстраивания кнопок в строку */
+    gap: 10px;             /* Отступ между кнопками */
+    align-items: center;   /* Выравнивание кнопок по вертикали */
+    margin-bottom: 20px;
+  }
+
+  /* Кнопки */
+  .edit-btn, .delete-btn, .read-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;  /* Убираем подчеркивание с ссылок */
+  }
+
+  .edit-btn:hover, .read-btn:hover {
+    background-color: #f0ad4e;
+  }
+
+  .delete-btn:hover {
+    background-color: #c9302c;
+  }
+
+  
+  /* Footer */
+  .post-footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+  }
+  
+  .add-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-btn:hover {
+    background-color: #31b0d5;
+  }
+  
+  /* Form styles */
+  .article-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .article-form label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .article-form input,
+  .article-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .article-form input:focus,
+  .article-form textarea:focus {
+    border-color: #5bc0de;
+  }
+  
+  .article-form textarea {
+    resize: none;
+  }
+  
+  /* Form actions */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .publish-btn {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .publish-btn:hover {
+    background-color: #4cae4c;
+  }
+  
+  .back-link {
+    font-size: 14px;
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  

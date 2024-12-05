@@ -1,0 +1,67 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Life Blog</title>-->
+<!--  <link rel="stylesheet" href="/css/styl.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--  <header class="header">-->
+<!--    <div class="container">-->
+<!--      <h1 class="logo">life blog</h1>-->
+<!--    </div>-->
+<!--  </header>-->
+
+<!--  <main class="main">-->
+<!--    <div th:each="el : ${blogs}" class="container">-->
+<!--      <div class="post">-->
+<!--        <h3 th:text="${el.title}" class="post-title"></h3>-->
+<!--        <p th:text="${el.summary}" class="post-description"></p>-->
+<!--        <button th:href="'/details/' + ${el.id}" class="read-btn">READ</button>-->
+<!--        <div class="post-footer">-->
+<!--          <span th:text="${el.author}" class="post-author"></span>-->
+<!--&lt;!&ndash;          <span th:text="${el.views}" class="post-views"></span>&ndash;&gt;-->
+<!--          <span th:text="${el.views}" class="post-views"></span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <button th:href="/create" class="add-btn">+</button>-->
+<!--    </div>-->
+<!--  </main>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life Blog</title>
+  <link rel="stylesheet" th:href="@{/css/styl.css}">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <h1 class="logo">life blog</h1>
+  </div>
+</header>
+
+<main class="main">
+  <div th:each="el : ${blogs}" class="container">
+    <div class="post">
+      <h3 th:text="${el.title}" class="post-title"></h3>
+      <p th:text="${el.summary}" class="post-description"></p>
+      <!-- Кнопка для отправки POST-запроса на проверку авторства и перенаправление -->
+      <form th:action="'/view/details/' + ${el.id}" method="post">
+        <button type="submit" class="read-btn">READ</button>
+      </form>
+      <div class="post-footer">
+        <span th:text="${el.author}" class="post-author"></span>
+        <span th:text="${el.views}" class="post-views"></span>
+      </div>
+    </div>
+  </div>
+  <button onclick="location.href='/create'" class="add-btn">+</button>
+</main>
+</body>
+</html>

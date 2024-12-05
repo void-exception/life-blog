@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Blog - Запись</title>
+    <link rel="stylesheet" href="/css/styl.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">life blog</h1>
+    </div>
+</header>
+
+<main class="main">
+    <div th:each="el : ${blog}" class="container">
+        <div class="post">
+            <h2 th:text="${el.title}" class="post-title"></h2>
+            <p th:text="${el.fullText}" class="post-description"></p>
+            <div class="post-footer">
+                <span th:text="${el.author}" class="post-author"></span>
+                <span th:text="${el.views}" class="post-views"></span>
+            </div>
+        </div>
+        <a href="/home" class="back-link">Вернуться на главную</a>
+    </div>
+</main>
+</body>
+</html>
